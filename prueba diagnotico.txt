@@ -1,0 +1,46 @@
+Algoritmo pruebadiagnostica
+	Escribir ("Ingrese el numero de autos a ingresar")
+	Leer x
+	a <-1
+	autosarg <-0
+	autoscol<-0
+	autoschil <-0
+	autosotros<-0
+	Mientras a <= x Hacer
+		Escribir ("Ingrese la marca del automovil")
+		leer marca
+		Escribir ("Ingrese el origen del automovil")
+		Escribir ("Opciones: argentina-colombia-chile-otros")
+		leer origen
+		Escribir ("Ingrese el costo del automovil")
+		leer costo
+		Si origen = "argentina" Entonces
+			imp = costo * 0.20
+			autosarg <- autosarg+1
+		Fin Si
+		Si origen = "colombia" Entonces
+			imp = costo * 0.25
+			autoscol <- autoscol+1
+		Fin Si
+		Si origen = "chile" Entonces
+			imp = costo * 0.30
+			autoschil <- autoschil+1
+		Fin Si
+		Si origen = "otros"  Entonces 
+			imp = costo * 0.40
+			autosotro <- autosotro+1
+		FinSi
+		imptotal = imptotal +imp
+		pfinal= costo + imp
+		ptotal= ptotal + pfinal 
+		a <- a+1
+	Fin Mientras
+	Escribir "El total de autos importados es de: " , x 
+	Escribir "El total de impuestos generados es de: " , imptotal
+	Escribir "El total de los precios de venta de los autos es de:", ptotal  
+	Escribir "Autos argentina", autosarg
+	Escribir "Autos Colombia" autoscol
+	Escribir "Autos Chile:" , autoschil
+	Escribir "Autos de otros paises:", autosotro
+	
+FinAlgoritmo
